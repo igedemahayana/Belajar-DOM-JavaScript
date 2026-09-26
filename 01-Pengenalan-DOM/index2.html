@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traversing Elements</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+  <div class="group">
+    <p class="text">Welcome to Traversing Element</p>
+  </div>
+
+  <div class="childrens">
+    <p>Child 1</p>
+    <p>Child 2</p>
+    <p>Child 3</p>
+    <p>Child 4</p>
+  </div>
+
+  <div class="fruits">
+    <p>Orange</p>
+    <p class="second">Watermelon</p>
+    <p>Apple</p>
+    <p>Mango</p>
+  </div>
+</body>
+
+<script>
+  // Cara mendapatkan elemen induk
+  const txt = document.querySelector(".text");
+  console.log(txt); // <p class="text">Welcome to Traversing Element</p>
+  console.log(txt.parentNode);
+  console.log(txt.parentElement);
+
+  // cara mendapatkan element anak
+  const childrens = document.querySelector(".childrens");
+  console.log(childrens.firstElementChild); // mendapatkan anak pertama, Output: Child 1
+  console.log(childrens.lastElementChild); // mendapatkan anak terakhir, Output: Child 4
+  console.log(childrens.childNodes);// ingin mendapatkan semua element anak
+
+  // cara memilih saudara kandung berikutnya dan saudara kandung sebelumnnya dari suatu element
+  const second = document.querySelector(".second");
+  console.log(second.previousElementSibling); // saudara kandung sebelumnnya yaitu: Orange
+  console.log(second.nextElementSibling); // saudara kandung setelahnya yaitu: Apple
+</script>
+
+</html>
