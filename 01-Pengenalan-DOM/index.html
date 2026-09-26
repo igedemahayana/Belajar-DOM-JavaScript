@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar DOM JavaScript</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div>
+    <!-- getELementById = greetings -->
+    <p id="greetings">Welcome to Apple Park</p>
+
+    <!-- getElementByName = language -->
+    <input type="radio" name="language" value="JavaScript">
+    <input type="radio" name="language" value="GSAP">
+
+    <!-- getELementByTagName = h2 -->
+    <h2>First Heading</h2>
+    <h2>Second Heading</h2>
+    <h2>Third Heading</h2>
+    <h2>Fourth Heading</h2>
+
+    <!-- getELementByClassName -->
+    <p class="message">Hello Mahayana</p>
+    <p class="message">Hello Mahayana</p>
+    <p class="message">Hello Mahayana</p>
+
+    <!-- querySelector jika class (.) dan jika id (#) -->
+    <h1 class="username">Username: Mahayana</h1>
+    <h1 id="password">Myanaa</h1>
+
+    <!-- querySelectorALl -->
+    <p id="selector">First Selector</p>
+    <p id="selector">Second Selector</p>
+    <p id="selector">Third Selector</p>
+
+    <!-- querySelector - kita hanya ingin menampilkan user kedua dan ketiga -->
+    <h1 class="user">User 1</h1>
+    <div id="container">
+      <h1 class="user">User 2</h1>
+      <h1 class="user">User 3</h1>
+    </div>
+    <!-- Output: Hanya inginUser 2 & User 3 saja muncul -->
+  </div>
+</body>
+
+<script>
+  const greetings = document.getElementById("greetings");
+  const language = document.getElementsByName("language");
+  const heading2 = document.getElementsByTagName("h2");
+  const message = document.getElementsByClassName("message");
+  const username = document.querySelector(".username");
+  const password = document.querySelector("#password");
+  const selectorALl = document.querySelectorAll("#selector");
+
+  const cont = document.querySelector("#container")
+  const user = cont.querySelectorAll(".user");
+
+  console.log(greetings);
+  console.log(language);
+  console.log(heading2);
+  console.log(message);
+  console.log(username);
+  console.log(password);
+  console.log(selectorALl);
+  console.log(user); // Hanya User 2 & User 3 yang muncul
+</script>
+
+</html>
