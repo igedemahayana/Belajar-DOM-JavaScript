@@ -1,40 +1,60 @@
-# Silabus: Belajar DOM JavaScript dari Nol
-### Mentor: Panduan terstruktur, 10 pertemuan
+## 07. DOM Learn From GreatStack
 
----
+#### 1. What is DOM
 
-## Cara Pakai Folder Ini
+#### 2. What is nodes and type of nodes
 
-1. Kerjakan folder **berurutan** dari `01` sampai `10` — jangan loncat, karena tiap pertemuan bergantung pada pemahaman pertemuan sebelumnya.
-2. Setiap folder isinya 1 file `README.md` dengan struktur yang sama: **Tujuan → Materi → Latihan → Checklist**.
-3. Jangan lanjut ke folder berikutnya sebelum semua kotak di **Checklist** bisa kamu centang dengan jujur.
-4. Kerjakan latihan di editor kamu sendiri (VS Code + Live Server, atau CodePen/JSFiddle) — jangan cuma dibaca.
+#### 3. Selecting elements using DOM
 
----
+- getElementById()
+- getElementsByName()
+- getElementsByTagName()
+- getElementsByClassName()
+- querySelector() and querySelectorAll()
 
-## Daftar Pertemuan
+#### 4. Traversing elements
 
-| # | Folder | Topik | Fokus |
-|---|---|---|---|
-| 1 | `01-Pengenalan-DOM` | Apa itu DOM | Konsep & cara kerja browser |
-| 2 | `02-Selecting-Elements` | Menunjuk elemen | `querySelector`, `querySelectorAll` |
-| 3 | `03-Konten-dan-Gaya` | Mengubah tampilan | `textContent`, `classList`, `style` |
-| 4 | `04-Atribut-dan-Dataset` | Data di elemen | `getAttribute`, `dataset` |
-| 5 | `05-Membuat-dan-Menghapus-Elemen` | Elemen dinamis | `createElement`, `appendChild`, `remove` |
-| 6 | `06-Traversing-DOM` | Navigasi antar elemen | parent, children, sibling |
-| 7 | `07-Event-Dasar` | Membuat halaman interaktif | `addEventListener`, event object |
-| 8 | `08-Event-Lanjutan-dan-Delegation` | Event tingkat lanjut | bubbling, delegation, preventDefault |
-| 9 | `09-Form-dan-Validasi` | Mengambil data user | `FormData`, validasi manual |
-| 10 | `10-Proyek-Akhir` | Proyek gabungan | Capstone project: To-Do App |
+- Selecting parent element
+- Selecting child element
+- Selecting Sibling elements
 
----
+#### 5. Manipulating HTML elements
 
-## Target Setelah Selesai 10 Pertemuan
+- createElement()
+- appendChild()
+- textContent
+- innerHTML
+- after()
+- append()
+- prepend()
+- insertAdjacentHTML()
+- replaceChild()
+- cloneNode()
+- removeChild()
+- insertBefore()
 
-Kamu akan bisa membangun aplikasi front-end interaktif dari nol tanpa framework — murni HTML + CSS + JavaScript — dan siap lanjut ke materi Async JavaScript, GSAP, atau React dengan fondasi yang solid.
+#### 6. Attribute methods
 
-## Aturan Mentor
+- getAttribute()
+- setAttribute()
+- hasAttribute()
+- removeAttribute()
 
-- **Tidak ada shortcut.** Setiap latihan harus benar-benar dijalankan di browser, bukan cuma dibayangkan.
-- **Error itu bagian dari proses.** Kalau stuck di suatu latihan lebih dari 20-30 menit, itu sinyal untuk bertanya, bukan menyerah atau skip.
-- **Ulangi tanpa contekan.** Setelah selesai satu pertemuan, coba tutup materinya dan kerjakan ulang latihan intinya dari ingatan besok paginya — ini yang bikin ilmu benar-benar nempel di memori jangka panjang.
+#### 7. Manipulating Element's Styles
+
+- style property
+- cssText
+- getComputedStyle()
+- className property
+- classList property
+
+#### 8. JavaScript Events
+
+- What is event in JavaScript
+- Event Bubbling & Event Capturing
+- Event Handler in HTML Attributes
+- Event Objects
+- DOM Level 0 event handlers
+- addEventListener()
+- removeEventListener()
+- Different Types of Event
