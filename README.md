@@ -14,9 +14,9 @@
 
 #### 4. Traversing elements
 
-- Selecting parent element
-- Selecting child element
-- Selecting Sibling elements
+- Selecting parent element (parentNode, parentElement)
+- Selecting child element (firstElementChild, lastElementChild, childNodes)
+- Selecting Sibling elements (previousElementSibling, nextElementSibling)
 
 #### 5. Manipulating HTML elements
 

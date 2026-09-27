@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulating HTML Elements</title>
+</head>
+
+<body>
+  <ul id="major">
+    <li>Graphic Design</li>
+    <li>Software Engineer</li>
+  </ul>
+
+  <ul id="productApple">
+    <li>IPhone</li>
+    <li>MacBook</li>
+  </ul>
+
+  <ul class="techStack">
+    <li>Figma</li>
+    <li>Tailwind</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <ul id="menuNavbar">
+    <li>Home</li>
+    <li>About</li>
+    <li>Features</li>
+    <li style="display: none;">Contact</li>
+  </ul>
+</body>
+
+<script>
+  // createElement()
+  let createDiv = document.createElement("div");
+  let createH2 = document.createElement("h2");
+
+  // innerHTML & innerText
+  createDiv.innerHTML = "<h2> Hai aku Mahayana </h2>"; // membuat tag beserta isinya
+  createH2.innerText = "Hai aku Arum"; // sudah dibuatkan tag html tapi harus di isi
+
+  // appendChild()
+  let majors = document.getElementById("major");
+  let listMajor = document.createElement("li");
+  listMajor.innerText = "Computer Engineer";
+  majors.appendChild(listMajor);
+
+  let productApple = document.getElementById("productApple");
+  let addProductApple = document.createElement("li");
+  addProductApple.innerText = "AirPods";
+  productApple.appendChild(addProductApple);
+
+  let techStack = document.querySelector(".techStack");
+  let addTechStack = document.createElement("li");
+  addTechStack.innerText = "React + TypeScript";
+  techStack.appendChild(addTechStack);
+
+  // textContent
+  let menuNavbar = document.querySelector("#menuNavbar");
+
+  console.log(createDiv); // Output: Hai aku Mahayana
+  console.log(createH2); // Output: Hai aku Arum
+
+  console.log(majors); // Graphic Design, Software Engineer, Computer Engineer
+  console.log(productApple) // IPhone, Macbook, AirPods
+  console.log(techStack); // Figma, Tailwind, JavaScript, React + TypeScript
+  console.log(menuNavbar.textContent); // Home, About, Features, Contact
+  console.log(menuNavbar.innerText); // Home, About, Features
+
+  // perbedaan textContent & innerHTML  
+  /*
+  textContent mengambil semua teks di dalam elemen 
+  dan anak-anaknya apa adanya seperti yang tertulis di dalam kode HTML, 
+  termasuk teks yang disembunyikan dengan CSS (display: none).
+  */
+
+  /*
+  innerText hanya mengambil teks yg benar-benar terlihat
+  oleh pengguna di layar, sehingga mengabaikan elemen yg disembunyikan oleh CSS
+  */
+</script>
+
+</html>
