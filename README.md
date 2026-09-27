@@ -1,10 +1,14 @@
-## 07. DOM Learn From GreatStack
+# 07. DOM Learn From GreatStack
 
-#### 1. What is DOM
+<img src="/images/Belajar-DOM-GreatStack.jpg" alt="Judul Video">
 
-#### 2. What is nodes and type of nodes
+Link Video: https://youtu.be/WjxQRfZfZnw
 
-#### 3. Selecting elements using DOM
+### 1. What is DOM
+
+### 2. What is nodes and type of nodes
+
+### 3. Selecting elements using DOM
 
 - getElementById()
 - getElementsByName()
@@ -12,13 +16,13 @@
 - getElementsByClassName()
 - querySelector() and querySelectorAll()
 
-#### 4. Traversing elements
+### 4. Traversing elements
 
 - Selecting parent element (parentNode, parentElement)
 - Selecting child element (firstElementChild, lastElementChild, childNodes)
 - Selecting Sibling elements (previousElementSibling, nextElementSibling)
 
-#### 5. Manipulating HTML elements
+### 5. Manipulating HTML elements
 
 - createElement()
 - appendChild()
@@ -33,14 +37,14 @@
 - removeChild()
 - insertBefore()
 
-#### 6. Attribute methods
+### 6. Attribute methods
 
 - getAttribute()
 - setAttribute()
 - hasAttribute()
 - removeAttribute()
 
-#### 7. Manipulating Element's Styles
+### 7. Manipulating Element's Styles
 
 - style property
 - cssText
@@ -48,7 +52,7 @@
 - className property
 - classList property
 
-#### 8. JavaScript Events
+### 8. JavaScript Events
 
 - What is event in JavaScript
 - Event Bubbling & Event Capturing
