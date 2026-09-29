@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attribute Methods</title>
+</head>
+
+<body>
+  <input type="text" id="username" placeholder="Masukkan Username">
+  <!-- type, id, placeholder -> nama atribut -->
+  <!-- "text", "username", "Masukkan Username" -> nilai atribut -->
+  <input type="password" id="password" placeholder="Masukkan Password">
+  <input type="email" id="email" placeholder="example@gmail.com">
+  <input type="text" id="name" placeholder="example: tunggarum" class="name">
+</body>
+
+<script>
+  inputUsername = document.getElementById("username");
+  inputPassword = document.getElementById("password");
+  inputEmail = document.getElementById("email");
+  inputName = document.getElementById("name");
+
+  console.log(inputUsername.attributes);
+
+  // getAttribute() -> mendapatkan attribute
+  console.log(inputUsername.getAttribute("type"));
+  console.log(inputUsername.getAttribute("id"));
+  console.log(inputUsername.getAttribute("placeholder"));
+
+  // setAttribute() -> mengatur attribute
+  // nameELement.setAttribute("name", "value");
+  inputPassword.setAttribute("class", "password");
+  console.log(inputPassword);
+
+  // hasAttribute() -> memiliki attribute
+  // mengecek  nama attribute kalau ada true, kalau engga false
+  console.log(inputEmail.hasAttribute("class")); // false
+  console.log(inputEmail.hasAttribute("id")); // true
+
+  // removeAttribute()
+  inputName.removeAttribute("class");
+  console.log(inputName);
+</script>
+
+</html>
