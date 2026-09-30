@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulating Elements Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    #password {
+      background-color: blue;
+      font-size: 16px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title" class="main message">Myanaa</h1>
+  <p id="paragraph" class="main message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
+    accusamus.</p>
+
+  <input type="name" id="username" placeholder="Masukkan Username"
+    style="background-color: cornflowerblue; font-size: 16px;">
+
+  <input type="email" id="email" placeholder="Masukkan Email" style="background-color: cornflowerblue;">
+  <input type="password" name="password" id="password" placeholder="Masukkan Password">
+</body>
+
+<script>
+  let inputUsername = document.querySelector("#username");
+  let inputEmail = document.querySelector("#email");
+  let inputPassword = document.querySelector("#password");
+  let title = document.querySelector("#title");
+  let paragraph = document.querySelector("#paragraph");
+
+  // styleproperty
+  console.log(inputUsername.style);
+  console.log(inputUsername.style.backgroundColor);
+  console.log(inputUsername.style.fontSize);
+
+  // cssText -> bisa mendapatkan nama properti dan nilainya
+  // inputEmail.style.cssText = "width: 195px";
+  // awal kurang efektif karena menimpa dengan css inline jadi warna ungu nya ga keluar
+  // solusinya adalah menggunakan operator penugasan dari = menjadi +=
+  inputEmail.style.cssText += "width: 195px; height: 20px; margin-top: 4px; font-size: 16px";
+  console.log(inputEmail);
+
+  // getComputedStyle() -> cara mendapatkan properti CSS yg tertulis di CSS Eskternal
+  // window.getComputedStyle(element, pseudoElement);  
+  console.log(window.getComputedStyle(inputPassword).fontSize); // 16px
+  console.log(window.getComputedStyle(inputPassword).fontFamily); // Arial
+  console.log(window.getComputedStyle(inputEmail).backgroundColor); // rgb(100, 149, 237)
+
+  // className property -> mengambil className
+  console.log(title.className); // main message
+  // bisa menambahkan class disini
+  title.className = "text-[32px] font-semibold text-blue-500";
+  console.log(title); // main message text-[22px] font-semibold text-blue-500
+
+  // classList property
+  console.log(paragraph.classList);
+  paragraph.classList.add("text-red-500", "font-semibold");
+  paragraph.classList.remove("text-red-500");
+  // paragraph.classList.toggle();
+  console.log(paragraph.classList.contains("main")); // jika ada class ini true
+  console.log(paragraph.classList.contains("msg")); // jika tidak ada false
+  console.log(paragraph);
+</script>
+
+</html>
