@@ -30,6 +30,27 @@
     <li>Features</li>
     <li style="display: none;">Contact</li>
   </ul>
+
+  <ul id="fruits">
+    <li>Orange</li>
+    <li>Watermelon</li>
+  </ul>
+
+  <ul id="techCompany">
+    <li>Timedoor</li>
+  </ul>
+
+  <ul id="hobiArum">
+    <li>Menggambar</li>
+    <li>Digital Art</li>
+  </ul>
+
+  <ul id="nameStudent">
+    <li>Lixun</li>
+    <li>Mahayana</li>
+    <li>Arum</li>
+    <li>Yu Zahao</li>
+  </ul>
 </body>
 
 <script>
@@ -71,8 +92,8 @@
 
   // perbedaan textContent & innerHTML  
   /*
-  textContent mengambil semua teks di dalam elemen 
-  dan anak-anaknya apa adanya seperti yang tertulis di dalam kode HTML, 
+  textContent mengambil semua teks di dalam elemen
+  dan anak-anaknya apa adanya seperti yang tertulis di dalam kode HTML,
   termasuk teks yang disembunyikan dengan CSS (display: none).
   */
 
@@ -80,6 +101,54 @@
   innerText hanya mengambil teks yg benar-benar terlihat
   oleh pengguna di layar, sehingga mengabaikan elemen yg disembunyikan oleh CSS
   */
+
+  // after() -> menyisipkan satu / lebih node setelah elemen
+  // Element.after(node) -> "taruh sesuatu setelah elemen ini".
+  let fruits = document.querySelector("#fruits");
+  fruits.after("Apple");
+
+  let techCompany = document.querySelector("#techCompany");
+  let str1 = document.createElement("li");
+  let str2 = document.createElement("li");
+
+  str1.textContent = "Koding Next Bali";
+  str2.textContent = "John ID";
+  techCompany.after(str1, str2);
+  // tidak masuk ke div techCompany
+  // karena after() setelah element
+
+  // prepend() -> awal isi element
+  // parentNode.prepend(newNodes);
+
+  // append() -> akhir isi elemen
+  // parentNode.append(newNodes);
+
+  // insertAdjectiveHTML()
+  // element.insertAdjacentHTML(positionName, text)
+  let hobiArum = document.querySelector("#hobiArum");
+  hobiArum.insertAdjacentHTML("beforeend", "<li>Public Speaking</li>")
+  hobiArum.insertAdjacentHTML("afterbegin", "<li>Belanja</li>")
+  hobiArum.insertAdjacentHTML("afterend", "<li>Makan</li>")
+  hobiArum.insertAdjacentHTML("beforebegin", "<li>Jalan Jalan</li>")
+
+  // replaceChild()
+  // parentNode.replaceChild(newChild, oldChild);
+
+  // cloneNode()
+  let cloneHobiArum = hobiArum.cloneNode(true);
+  let cloneTechCompany = techCompany.cloneNode(false);
+  console.log(cloneHobiArum);
+  console.log(cloneTechCompany);
+
+  // removeChild()
+  let student = document.querySelector("#nameStudent");
+  student.removeChild(student.lastElementChild);
+  student.removeChild(student.firstElementChild);
+  console.log(student);
+
+  // insertBefore()
+
+  // NOTE: Belum di commit disini
 </script>
 
 </html>
